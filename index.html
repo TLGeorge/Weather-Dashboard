@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Taneisha's Weather Dashboard!</title>
+</head>
+
+<body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script> -->
+
+    <!-- Navigation bar at top of Page -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navCenter">
+        <span class="navbar-brand mb-1 h1">Weather Dashboard</span>
+    </nav>
+    <br>
+    <div class="row">
+        <div class="col">
+            <div class="leftCol">
+                <!-- City-Search entry -->
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Search for a City:</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+
+                <!-- List of Searched Cities|Left side of page -->
+                <ul class="list-group">
+                    <li class="list-group-item"> </li>
+                    <li class="list-group-item"> </li>
+                    <li class="list-group-item"> </li>
+                    <li class="list-group-item"> </li>
+                    <li class="list-group-item"> </li>
+                </ul>
+            </div>
+
+
+            <div>
+                <div class="col">
+                    <div class="rightCol">
+                        <div class="container">
+                            <div class="row">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 id="Main City" class="card-title">Card title</h2>
+                                        <h4 id="Temperature" class="card-subtitle mb-2 text-muted">Temperature: </h4>
+                                        <h4 id="Humidity" class="card-subtitle mb-2 text-muted">Humidity: </h4>
+                                        <h4 id="Wind Speed" class="card-subtitle mb-2 text-muted">Wind Speed: </h4>
+                                        <h4 id="UV Index" class="card-subtitle mb-2 text-muted">UV Index:</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div id="Day1" class="col column1">
+                                    <p>Date 1</p>
+                                </div>
+                                <div id="Day2" class="col column2">
+                                    <p>Date 2</p>
+                                </div>
+                                <div id="Day3" class="col column3">
+                                    <p>Date 3</p>
+                                </div>
+                                <div id="Day4" class="col column4">
+                                    <p>Date 4</p>
+                                </div>
+                                <div id="Day5" class="col column5">
+                                    <p>Date 5</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+</body>
+
+</html>

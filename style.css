@@ -1,0 +1,15 @@
+.navCenter{
+    justify-content: center;
+}
+
+.leftCol{
+float: left;
+background: #86aaec;
+width: 25%;
+}
+
+.rightCol{
+    float: right;
+    background:#86aaec;
+    width: 75%
+}
