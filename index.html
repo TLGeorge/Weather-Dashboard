@@ -16,17 +16,17 @@
 </head>
 
 <body>
-    <!-- Optional JavaScript -->
+    Optional JavaScript
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script> -->
+        crossorigin="anonymous"></script> --> -->
 
     <!-- Navigation bar at top of Page -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navCenter">
@@ -40,8 +40,8 @@
                 <form>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <label for="inputEmail4">Search for a City:</label>
-                            <input type="email" class="form-control" id="inputEmail4">
+                            <label for="label">Search for a City:</label>
+                            <input type="text" class="form-control" id="inputEmail4">
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Search</button>
@@ -57,37 +57,52 @@
                 </ul>
             </div>
 
-
+            <!-- Right Side of Page. Main City Display & 5 Day Forecast -->
             <div>
                 <div class="col">
                     <div class="rightCol">
-                        <div class="container">
+                        <div class="container-fluid">
                             <div class="row">
                                 <div class="card" style="width: 18rem;">
                                     <div class="card-body">
-                                        <h2 id="Main City" class="card-title">Card title</h2>
+                                        <h2 id="MainCity" class="card-title">Card title</h2>
                                         <h4 id="Temperature" class="card-subtitle mb-2 text-muted">Temperature: </h4>
                                         <h4 id="Humidity" class="card-subtitle mb-2 text-muted">Humidity: </h4>
-                                        <h4 id="Wind Speed" class="card-subtitle mb-2 text-muted">Wind Speed: </h4>
-                                        <h4 id="UV Index" class="card-subtitle mb-2 text-muted">UV Index:</h4>
+                                        <h4 id="WindSpeed" class="card-subtitle mb-2 text-muted">Wind Speed: </h4>
+                                        <h4 id="UVIndex" class="card-subtitle mb-2 text-muted">UV Index:</h4>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div id="Day1" class="col column1">
-                                    <p>Date 1</p>
+                            <div class="row container-fluid">
+                                <div id="Day1" class="card col column1">
+                                    <p id="day1Date"> </p>
+                                    <p id="day1Icon"> </p>
+                                    <p id="day1Temp">Temp:</p>
+                                    <p id="day1Humidity">Humidity:</p>
                                 </div>
-                                <div id="Day2" class="col column2">
-                                    <p>Date 2</p>
+                                <div id="Day2" class="card col column2">
+                                    <p id="day2Date"> </p>
+                                    <p id="day2Icon"> </p>
+                                    <p id="day2Temp">Temp:</p>
+                                    <p id="day2Humidity">Humidity:</p>
                                 </div>
-                                <div id="Day3" class="col column3">
-                                    <p>Date 3</p>
+                                <div id="Day3" class="card col column3">
+                                    <p id="day3Date"> </p>
+                                    <p id="day3Icon"> </p>
+                                    <p id="day3Temp">Temp:</p>
+                                    <p id="day3Humidity">Humidity:</p>
                                 </div>
-                                <div id="Day4" class="col column4">
-                                    <p>Date 4</p>
+                                <div id="Day4" class="card col column4">
+                                    <p id="day4Date"> </p>
+                                    <p id="day4Icon"> </p>
+                                    <p id="day4Temp">Temp:</p>
+                                    <p id="day4Humidity">Humidity:</p>
                                 </div>
-                                <div id="Day5" class="col column5">
-                                    <p>Date 5</p>
+                                <div id="Day5" class="card col column5">
+                                    <p id="day5Date"> </p>
+                                    <p id="day5Icon"> </p>
+                                    <p id="day5Temp">Temp:</p>
+                                    <p id="day5Humidity">Humidity:</p>
                                 </div>
                             </div>
                         </div>
@@ -96,5 +111,7 @@
                 </div>
             </div>
 </body>
+<script src="script.js"></script>
+<script src="api.js"></script>
 
 </html>
