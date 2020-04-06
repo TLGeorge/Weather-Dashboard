@@ -1,28 +1,18 @@
 
-// Variables
-var searchButton = document.querySelector(".searchButton");
-var citySearched = document.querySelector(".searchButton input");
+// Add event listener to "Set Temperature" button
+// $(“searchButton”).on("click", function() {
+    // console.log()
+// }
 
 
 
-// Main City Display
-// var mainCity = $("MainCity");
-// var mainTemp = $("Temperature")
-// var mainHumidity = $("Humidity");
-// var mainWindSpeed = $("WindSpeed");
-// var mainUVIndex = $("UVIndex");
+// searchButton.addEventListener("submit", e => {
+//     e.preventDefault();
+//     const inputValue = citySearched.value;
+//     console.log(inputValue);
+// });
 
 
-
-// Add event listener to "Start Quiz" button
-searchButton.addEventListener("submit", e => {
-    e.preventDefault();
-    const inputValue = citySearched.value;
-    console.log(inputValue);
-});
-
-
-// API Key 
 
 
 //Display current weather stats for searched city
@@ -70,34 +60,8 @@ searchButton.addEventListener("submit", e => {
 // var day5Temp = $("temperature5");
 // var day5Humidity = $("humidity5");
 
-// // Add event listener to "Start Quiz" button
-// searchButton.addEventListener("click", setWeather);
-// console.log("city search")
 
 
-// //Display current weather stats for searched city
-// function setWeather() {
-//     var currentDate = $("#MainCity");
 
-//     const today = moment();
-//     currentDate.text(today.format("dddd" + ", " + "MMMM" + " " + "DD" + ", " + "YYYY"));
 
-    // Set Temperature
-
-    // Set Humidity
-
-    // Wind Speed
-
-    // Set UV Index
-// }
-// setWeather();
-
-//Display current date in Jumbotron
-// function setDateTime() {
-//     var dateTimeP = $("#currentDay");
-
-//     const today = moment();
-//     dateTimeP.text(today.format("dddd" + ", " + "MMMM" + " " + "DD" + ", " + "YYYY"));
-// }
-// setDateTime();
 
