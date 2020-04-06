@@ -10,7 +10,7 @@ When the user enters a city and presses search, they are presented with the city
         ~ 3 to 5	Yellow: "Moderate"
         ~ 6 to 7	Orange: "High"
         ~ 8 to 10	Red:	"Very high"
-        ~ 11+	    Violet: "Extreme"
+        ~ 11+	        Violet: "Extreme"
 
     -5 Day forcast:
         - Date 
@@ -22,10 +22,10 @@ When a new city is searched, the weather stats are updated, and the previous cit
 
 If the city is clicked from the search history, then the corresponding weather stats are presented once again. 
 ```
-```
-Git Hub Repository:
+
+#Git Hub Repository:
  https://github.com/TLGeorge/Weather-Dashboard
 
-Weather Dashboard Application:
+#Weather Dashboard Application:
  https://tlgeorge.github.io/Weather-Dashboard/
- ```
+ 
