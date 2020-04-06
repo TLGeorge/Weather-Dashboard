@@ -25,7 +25,7 @@ $("#searchButton").on("click", function () {
 
 
 function getWeather(city) {
-    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&cnt=6&units=imperial&appid=" + APIKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&cnt=5&units=imperial&appid=" + APIKey;
     // We then created an AJAX call
     $.ajax({
         url: queryURL,
@@ -43,49 +43,49 @@ function getWeather(city) {
         $("#windy").html(response.list[0].wind.speed);
         // Set 5-Day Forecast
         // // DAY 1 of Forecast
-        $("#day1date").empty();
-        $("#day1date").html();
+        $("#day1Date").empty();
+        $("#day1Date").html();
         $("#day1Icon").empty();
-        $("#day1Icon").html(response.list[1].weather[0].icon);
+        $("#day1Icon").html(response.list[0].weather[0].icon);
         $("#day1temp").empty();
-        $("#day1temp").html(response.list[1].main.temp);
+        $("#day1temp").html(response.list[0].main.temp);
         $("#day1Humidity").empty();
-        $("#day1Humidity").html(response.list[1].main.humidity);
+        $("#day1Humidity").html(response.list[0].main.humidity);
         // Day 2 of Forecast
-        $("#day2date").empty();
-        $("#day2date").html();
+        $("#day2Date").empty();
+        $("#day2Date").html();
         $("#day2Icon").empty();
-        $("#day2Icon").html(response.list[2].weather[0].icon);
+        $("#day2Icon").html(response.list[1].weather[0].icon);
         $("#day2temp").empty();
-        $("#day2temp").html(response.list[2].main.temp);
+        $("#day2temp").html(response.list[1].main.temp);
         $("#day2Humidity").empty();
-        $("#day2Humidity").html(response.list[2].main.humidity);
+        $("#day2Humidity").html(response.list[1].main.humidity);
         // Day 3 of Forecast
-        $("#day3date").empty();
-        $("#day3date").html();
+        $("#day3Date").empty();
+        $("#day3Date").html();
         $("#day3Icon").empty();
-        $("#day3Icon").html(response.list[3].weather[0].icon);
+        $("#day3Icon").html(response.list[2].weather[0].icon);
         $("#day3temp").empty();
-        $("#day3temp").html(response.list[3].main.temp);
+        $("#day3temp").html(response.list[2].main.temp);
         $("#day3Humidity").empty();
-        $("#day3Humidity").html(response.list[3].main.humidity);
+        $("#day3Humidity").html(response.list[2].main.humidity);
         // Day 4 of Forecast
-        $("#day4date").empty();
-        $("#day4date").html();
+        $("#day4Date").empty();
+        $("#day4Date").html();
         $("#day4Icon").empty();
-        $("#day4Icon").html(response.list[4].weather[0].icon);
+        $("#day4Icon").html(response.list[3].weather[0].icon);
         $("#day4temp").empty();
-        $("#day4temp").html(response.list[4].main.temp);
+        $("#day4temp").html(response.list[3].main.temp);
         $("#day4Humidity").empty();
-        $("#day4Humidity").html(response.list[4].main.humidity);
+        $("#day4Humidity").html(response.list[3].main.humidity);
         // Day 5 of Forecast
-        $("#day5date").empty();
-        $("#day5date").html();
+        $("#day5Date").empty();
+        $("#day5Date").html();
         $("#day5Icon").empty();
-        $("#day5Icon").html(response.list[1].weather[0].icon);
+        $("#day5Icon").html(response.list[4].weather[0].icon);
         $("#day5temp").empty();
-        $("#day5temp").html(response.list[1].main.temp);
+        $("#day5temp").html(response.list[4].main.temp);
         $("#day5Humidity").empty();
-        $("#day5Humidity").html(response.list[1].main.humidity);
+        $("#day5Humidity").html(response.list[4].main.humidity);
     });
 }
