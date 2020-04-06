@@ -49,20 +49,16 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="label">Search for a City:</label>
-                            <input type="text" class="form-control" id="citySearched"> text
-                        </div>
+                            <input type="text" class="form-control" id="citySearched"> </div>
                     </div>
                     <button type="submit" class="btn btn-primary" id="searchButton">Search</button>
                 </form>
 
                 <!-- List of Searched Cities|Left side of page -->
-                <ul class="list-group">
-                    <li class="list-group-item"> </li>
-                    <li class="list-group-item"> </li>
-                    <li class="list-group-item"> </li>
-                    <li class="list-group-item"> </li>
-                    <li class="list-group-item"> </li>
-                </ul>
+                <div id="SearchHistory">
+
+                </div>
+
             </div>
 
             <!-- Right Side of Page. Main City Display & 5 Day Forecast -->
@@ -73,7 +69,7 @@
                             <div class="row container-fluid">
                                 <div class="card" style="width: 18rem;">
                                     <div class="card-body temp">
-                                        <h2 id="MainCity" class="card-title"></h2>
+                                        <h2 id="MainCityandDate" class="card-title"></h2>
                                         <h4 id="Temperature" class="card-subtitle mb-2 text-muted">Temperature: </h4>
                                         <span>
                                             <div id="temp"></div>
@@ -97,43 +93,63 @@
                                 <h4>5-Day Forecast</h4>
                             </div>
                             <div class="row container-fluid">
-                                <div id="Day1" class="card col column1">
-                                    <p id="day1Date"> </p>
-                                    <p id="day1Icon"> </p>
-                                    <p id="day1Temp">Temp:</p>
-                                    <p id="day1Humidity">Humidity:</p>
+                                <div id="Day1" class="col-sm card ">
+                                    <div id="day1Date"> </div>
+                                    <div id="day1Icon"> </div>
+                                    <div>Temp:</div><span>
+                                        <div id="day1Temp"></div>
+                                    </span>
+                                    <div>Humidity:</div><span>
+                                        <div id="day1Humidity"></div>
+                                    </span>
                                 </div>
-                                <div id="Day2" class="card col column2">
-                                    <p id="day2Date"> </p>
-                                    <p id="day2Icon"> </p>
-                                    <p id="day2Temp">Temp:</p>
-                                    <p id="day2Humidity">Humidity:</p>
+                                <div id="Day2" class="col-sm card">
+                                    <div id="day2Date"> </div>
+                                    <div id="day2Icon"> </div>
+                                    <div>Temp:</div><span>
+                                        <div id="day2Temp"></div>
+                                    </span>
+                                    <div>Humidity:</div><span>
+                                        <div id="day2Humidity"></div>
+                                    </span>
                                 </div>
-                                <div id="Day3" class="card col column3">
-                                    <p id="day3Date"> </p>
-                                    <p id="day3Icon"> </p>
-                                    <p id="day3Temp">Temp:</p>
-                                    <p id="day3Humidity">Humidity:</p>
+                                <div id="Day3" class="col-sm card">
+                                    <div id="day3Date"> </div>
+                                    <div id="day3Icon"> </div>
+                                    <div>Temp:</div><span>
+                                        <div id="day3Temp"></div>
+                                    </span>
+                                    <div>Humidity:</div><span>
+                                        <div id="day3Humidity"></div>
+                                    </span>
                                 </div>
-                                <div id="Day4" class="card col column4">
-                                    <p id="day4Date"> </p>
-                                    <p id="day4Icon"> </p>
-                                    <p id="day4Temp">Temp:</p>
-                                    <p id="day4Humidity">Humidity:</p>
+                                <div id="Day4" class="col-sm card">
+                                    <div id="day4Date"> </div>
+                                    <div id="day4Icon"> </div>
+                                    <div>Temp:</div><span>
+                                        <div id="day4Temp"></div>
+                                    </span>
+                                    <div>Humidity:</div><span>
+                                        <div id="day4Humidity"></div>
+                                    </span>
                                 </div>
-                                <div id="Day5" class="card col column5">
-                                    <p id="day5Date"> </p>
-                                    <p id="day5Icon"> </p>
-                                    <p id="day5Temp">Temp:</p>
-                                    <p id="day5Humidity">Humidity:</p>
+                                <div id="Day5" class="col-sm card">
+                                    <div id="day5Date"> </div>
+                                    <div id="day5Icon"> </div>
+                                    <div>Temp:</div><span>
+                                        <div id="day5Temp"></div>
+                                    </span>
+                                    <div>Humidity:</div><span>
+                                        <div id="day4Humidity"></div>
+                                    </span>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
-            </div>
-            <script src="api.js"></script>
+                <!-- <script src="api.js"></script> -->
+                <script src="newscript.js"></script>
 </body>
 
 </html>

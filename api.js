@@ -1,15 +1,14 @@
 // Search Variables
-var city = document.getElementById("citySearched").inputVal;
+// var city = document.getElementById("citySearched").inputVal;
 var searchHx = [];
 var currentCityandDate = $("#MainCityandDate").textContent;
 
-// console.log(citySearched);
-// var city = citySearched.value;
-// var city = "Miami";
 
+var city = "Miami";
 
 // Add event listener to Search  Button
-$("#searchButton").on("click", function (event) {
+$("#searchButton").on("click", function () {
+    event.preventDefault();
     console.log(city);
     // var V = citySearched.textContent;
     // console.log("blahblah");
@@ -23,7 +22,7 @@ $("#searchButton").on("click", function (event) {
 // set date for current day weather
 let today = new Date();
 let date = (today.getMonth() + 1) + '/' + today.getDate() + '/' + today.getFullYear();
-currentCityandDate.textContent = city + " " + "(" + date + ")";
+currentCityandDate = city + " " + "(" + date + ")";
 
 // API Variables: Here we are building the URL we need to query the database
 var APIKey = "71711d92043900bc02d163c46a5ff92e";
@@ -98,7 +97,9 @@ var setWeather = function (city) {
                 }
                 updateBg();
             })
-
+    });
+}
+setWeather();
 
         // // Set 5-Day Forecast
         // // DAY 1 of Forecast
@@ -126,7 +127,7 @@ var setWeather = function (city) {
         // $("weathericon5").append(response.list[5].weather[0].icon);
         // $("temperature5").append(response.list[5].main.temp);
         // $("humidity5").append(response.list[5].main.humidity);
-    });
+
 
 
 // function updateWeather() {
