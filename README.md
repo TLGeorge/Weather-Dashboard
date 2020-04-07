@@ -24,7 +24,7 @@
 ## If the city is clicked from the search history, then the corresponding weather stats are presented once again. 
 
 # Image
-![](.assets/weatherapp.png)
+![](assets/weatherapp.png)
 
 # Git Hub Repository:
  https://github.com/TLGeorge/Weather-Dashboard
