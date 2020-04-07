@@ -8,19 +8,23 @@ var APIKey = "71711d92043900bc02d163c46a5ff92e";
 // Add event listener to Search  Button
 $("#searchButton").on("click", function () {
     event.preventDefault();
-    console.log(city);
     var V = city.value;
     console.log(V);
     localStorage.setItem("cities", V);
-    console.log(localStorage);
+    // console.log(localStorage);
+    // localStorage.getItem(V);
+    // var searchHx = localStorage.cities(i);
+    // var hxVal = localStorage.getItem(V);
     getWeather(V);
 
-    for (let i = 0; i < localStorage.length; i++) {
-        const element = localStorage[i];
-        var searchHx = localStorage.key(i);
-        var hxVal = localStorage.getItem(V);
-        $("#SearchHistory").append(searchHx + hxVal + "<br>");
-    }
+    // for (let i = 0; i < localStorage.length; i++) {
+    // const element = localStorage[i];
+    // var searchHx = localStorage.cities(i);
+    // var hxVal = localStorage.getItem(V);
+    // var searchHx = localStorage.cities(i);
+    //     $("#SearchHistory").append(searchHx + hxVal + "<br>");
+
+    // }
 })
 
 
@@ -32,19 +36,24 @@ function getWeather(city) {
         method: 'GET'
     }).done(function (response) {
         console.log(response);
+        // set date for current day weather
+        let today = new Date();
+        let date = (today.getMonth() + 1) + '/' + today.getDate() + '/' + today.getFullYear();
+
         // Set Main Display
         $("#MainCityandDate").empty();
-        $("#MainCityandDate").html(response.city.name);
+        $("#MainCityandDate").html(response.city.name + "(" + date + ")");
         $("#temp").empty();
         $("#temp").html(response.list[0].main.temp);
         $("#humid").empty();
         $("#humid").html(response.list[0].main.humidity);
         $("#windy").empty();
         $("#windy").html(response.list[0].wind.speed);
+
         // Set 5-Day Forecast
-        // // DAY 1 of Forecast
+        // DAY 1 of Forecast
         $("#day1Date").empty();
-        $("#day1Date").html();
+        $("#day1Date").html(date);
         $("#day1Icon").empty();
         $("#day1Icon").html(response.list[0].weather[0].icon);
         $("#day1temp").empty();
@@ -87,5 +96,19 @@ function getWeather(city) {
         $("#day5temp").html(response.list[4].main.temp);
         $("#day5Humidity").empty();
         $("#day5Humidity").html(response.list[4].main.humidity);
+
+        // Set Main UV Index
+        function setUVI() {
+            var uviURL = "api.openweathermap.org/data/2.5/uvi/forecast?" + APIKey + "lat=37.75&lon=-122.37";
+            // We then created an AJAX call
+            $.ajax({
+                url: uviURL,
+                method: 'GET'
+            }).done(function (response) {
+                console.log(response);
+            });
+        }
+
+
     });
 }
