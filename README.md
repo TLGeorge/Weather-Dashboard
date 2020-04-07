@@ -22,7 +22,7 @@
 ## When a new city is searched, the weather stats are updated, and the previous city is listed in the search history. 
 
 ## If the city is clicked from the search history, then the corresponding weather stats are presented once again. 
-
+![](.assets/weatherapp.png)
 
 # Git Hub Repository:
  https://github.com/TLGeorge/Weather-Dashboard
