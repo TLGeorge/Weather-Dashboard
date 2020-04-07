@@ -10,21 +10,28 @@ $("#searchButton").on("click", function () {
     event.preventDefault();
     var V = city.value;
     console.log(V);
-    localStorage.setItem("cities", V);
-    // console.log(localStorage);
-    // localStorage.getItem(V);
+    localStorage.setItem("cityHX", V);
+    console.log(localStorage);
+
+
     // var searchHx = localStorage.cities(i);
     // var hxVal = localStorage.getItem(V);
     getWeather(V);
+    // var searchHx = $("#SearchHistory").createElement("<div>")
+    // searchHx.html(V);
 
-    // for (let i = 0; i < localStorage.length; i++) {
-    // const element = localStorage[i];
-    // var searchHx = localStorage.cities(i);
-    // var hxVal = localStorage.getItem(V);
-    // var searchHx = localStorage.cities(i);
-    //     $("#SearchHistory").append(searchHx + hxVal + "<br>");
 
-    // }
+    for (let i = 0; i < Storage.length; i++) {
+        console.log(Storage[i]);
+        localStorage.getItem("cityHX");
+        var hxVal = localStorage.getItem("cityHX");
+        console.log(localStorage.getItem("cityHX"));
+        // var searchHx = localStorage.cities(i);
+        // var hxVal = localStorage.getItem(V);
+        // var searchHx = localStorage.cities(i);
+        //     $("#SearchHistory").append(searchHx + hxVal + "<br>");
+
+    }
 })
 
 
